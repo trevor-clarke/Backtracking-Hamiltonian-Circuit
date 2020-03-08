@@ -1,8 +1,8 @@
     def getHamiltonian(self):
         if self.isConnected():
-            walk = Walk(self.totalVertices()+1)
-            walk.addVertex(0)
-            if self.tryVisiting(0, walk) or (len(walk) ==1):
+            walk = []
+            walk.append(0)
+            if self.tryVisiting(0, walk) or (self.totalV == 1):
                 return walk
         return None
 
